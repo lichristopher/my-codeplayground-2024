@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <button id="btn">Add Highlight</button>
+
+    <script>
+      // var btn = document.getElementById('btn');
+      // btn.addEventListener('click', function (e) {
+      //   btn.classList.toggle('highlight');
+      //   if (btn.innerText === 'Add Highlight') {
+      //     btn.innerText = 'Remove Highlight';
+      //   } else {
+      //     btn.innerText = 'Add Highlight';
+      //   }
+      // });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function () {
+          this.classList.toggle('highlight');
+
+          if (this.classList.contains('highlight')) {
+            this.textContent = 'Remove highlight';
+          } else {
+            this.textContent = 'Add highlight';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
